@@ -26,7 +26,7 @@ Here’s how to integrate Gemini Code Parser in your project:
 ```javascript
 import { GeminiCodeParser } from 'gemini-code-parser';
 
-const parser = new GeminiCodeParser('<Your_Google_AI_API_Key>');
+const parser = new GeminiCodeParser('<Your_Google_AI_API_Key>', '<Your_Google_Gemini_Model_Name>');
 ```
 
 ### Step 2: Generate Parsed Code Stream
@@ -49,9 +49,10 @@ parser.generateParsedCodeStream(prompt)
 #### Constructor
 
 ```javascript
-new GeminiCodeParser(apiKey: string)
+new GeminiCodeParser(apiKey: string, modelName: string)
 ```
 - `apiKey`: Google AI API key for accessing the Generative AI service.
+- `modelName`: Name of the Gemini model to use for generating code.
 
 #### Methods
 
@@ -91,7 +92,7 @@ Here’s a full example that listens to emitted events:
 ```javascript
 import { GeminiCodeParser } from 'gemini-code-parser';
 
-const parser = new GeminiCodeParser('<Your_Google_AI_API_Key>');
+const parser = new GeminiCodeParser('<Your_Google_AI_API_Key>', '<Your_Google_Gemini_Model_Name>');
 
 parser.on('file-start', data => {
   console.log("File start:", data);
