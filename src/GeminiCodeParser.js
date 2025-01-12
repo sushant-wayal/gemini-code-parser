@@ -4,10 +4,10 @@ import { formatPrompt } from './prompt.js';
 import { parseResponse } from './ParseResponse.js';
 
 export class GeminiCodeParser extends EventEmitter {
-  constructor(apiKey) {
+  constructor(apiKey, geminiModel) {
     super();
     const genAi = new GoogleGenerativeAI(apiKey);
-    this.model = genAi.getGenerativeModel({model: "gemini-1.5-flash"});
+    this.model = genAi.getGenerativeModel({model: geminiModel});
   }
 
   async generateContentStream(prompt) {
