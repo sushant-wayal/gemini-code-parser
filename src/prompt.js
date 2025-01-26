@@ -42,7 +42,7 @@ export const formatPrompt = (prompt) => {
   Consider following things to avoid errors in application:
     1. The files should be mentioned in the specific format.
     2. Make sure you provide the files, which you have imported in other files.
-    3. Make sure to use characters directlt, instead of using there codes, 
+    3. Make sure to use characters directtly, instead of using there codes, 
       for example,
         use single quotes instead of using &#39;.
         use < instead of using &lt;.
